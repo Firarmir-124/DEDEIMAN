@@ -176,6 +176,10 @@ let quizOver = function() {
     quizOverModal.classList.add('active');
     correctAnswer.innerHTML = score;
     numberOfAllQuestions2.innerHTML = questions.length;
+    volidateQuizOver();
+}
+
+let volidateQuizOver = function() {
     if (score < 2) {
         document.querySelector('h1').innerHTML = 'Плохой результат !'
         img.src = './img/false.svg';
